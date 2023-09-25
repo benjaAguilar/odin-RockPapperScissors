@@ -38,7 +38,7 @@ function game(){
 
     let roundResult = "you won: " + wins + " times" + "\n computer wons: " + losses + " times";
     console.log(roundResult);
-    
+
     if(wins === losses){
         wins = 0;
         losses = 0;
@@ -87,7 +87,7 @@ function getPlayerSelection(){
             return strPlayerSelection
 
         } else{
-            strPlayerSelection = ""
+            strPlayerSelection = "";
             alert("type error!");
 
         }
