@@ -35,7 +35,16 @@ function game(){
         playRound();
 
     }
-    if(wins > losses){
+
+    let roundResult = "you won: " + wins + " times" + "\n computer wons: " + losses + " times";
+    console.log(roundResult);
+    
+    if(wins === losses){
+        wins = 0;
+        losses = 0;
+        return "TIE!"
+
+    } else if(wins > losses){
         wins = 0;
         losses = 0;
         return "YOU ARE VICTORIUS"
