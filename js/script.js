@@ -18,21 +18,39 @@ function playRound(player){
         resultSection.textContent = "its a tie!";
 
     } else if(computer === "rock" && player === "scissors"){
-        playerHealth--;
+        healthSystem("player");
         resultSection.textContent = "You lose!";
 
     } else if(computer === "paper" && player === "rock"){
-        playerHealth--;
+        healthSystem("player");
         resultSection.textContent = "You lose!";
 
     } else if(computer === "scissors" && player === "paper"){
-        playerHealth--;
+        healthSystem("player");
         resultSection.textContent = "You lose!";
 
     } else{
-        pcHealth--;
+        healthSystem("pc");
         resultSection.textContent = "You won!";
 
+    }
+}
+
+function healthSystem(loseHealth){
+    if(loseHealth === "player"){
+        let heart = document.querySelector('.player-lives img');
+        heart.remove();
+        playerHealth--;
+
+    } else if(loseHealth === "pc"){
+        let heart = document.querySelector('.pc-lives img');
+        heart.remove();
+        pcHealth--;
+
+    }
+
+    if(playerHealth === 0 || pcHealth === 0){
+        endGame();
     }
 }
 

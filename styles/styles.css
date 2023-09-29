@@ -15,14 +15,15 @@ body{
 .pc-section{
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
-    min-width: 200px;
+    flex: initial;
+    min-width: 300px;
     align-items: center;
     justify-content: flex-start;
     background-color: bisque;
 }
 
-.lives img{
+.player-lives img,
+.pc-lives img{
     width: 50px;
 }
 
