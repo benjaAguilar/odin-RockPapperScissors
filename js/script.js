@@ -58,33 +58,6 @@ function healthSystem(loseHealth){
     }
 }
 
-function game(){
-    for(var i = 1; i <= 5; i++){
-        playRound();
-
-    }
-
-    let roundResult = "you won: " + wins + " times" + "\n computer wons: " + losses + " times";
-    console.log(roundResult);
-
-    if(wins === losses){
-        wins = 0;
-        losses = 0;
-        return "TIE!"
-
-    } else if(wins > losses){
-        wins = 0;
-        losses = 0;
-        return "YOU ARE VICTORIUS"
-
-    } else{
-        wins = 0;
-        losses = 0;
-        return "DEFEATED"
-
-    }
-}
-
 function getComputerSelection(){
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     let computerSelection;
