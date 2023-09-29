@@ -1,6 +1,9 @@
 body{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 223, 186);
     min-height: 97vh;
     display: flex;
+    background-color: #333;
 }
 
 .main{
@@ -8,7 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .user-section,
@@ -19,7 +22,9 @@ body{
     min-width: 300px;
     align-items: center;
     justify-content: flex-start;
-    background-color: bisque;
+    color: #333;
+    background-color: darkcyan;
+    box-shadow: 0px 0px 5px #333;
 }
 
 .player-lives img,
@@ -36,4 +41,36 @@ body{
 
 .displayer img{
     width: 150px;
+}
+
+.btn-box{
+    display: flex;
+    gap: 80px;
+}
+
+#rock-btn,
+#paper-btn,
+#scissors-btn{
+    background-color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 999px;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px #333;
+}
+
+#rock-btn:hover{
+    border: 5px solid rgb(254, 43, 241);
+}
+#paper-btn:hover{
+    border: 5px solid rgb(0, 223, 186);
+}
+#scissors-btn:hover{
+    border: 5px solid rgb(12, 124, 235);
+}
+
+button img{
+    width: 50px;
 }
