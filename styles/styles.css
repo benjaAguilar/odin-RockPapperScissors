@@ -14,10 +14,16 @@ body{
 .user-section,
 .pc-section{
     display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
     min-width: 200px;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     background-color: bisque;
+}
+
+.lives img{
+    width: 50px;
 }
 
 .displayer{
