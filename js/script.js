@@ -81,24 +81,3 @@ function getComputerSelection(){
 
     return computerSelection;
 }
-
-function getPlayerSelection(){
-    let playerSelection;
-    let strPlayerSelection;
-    do{
-        playerSelection = prompt("type rock, paper or scissors!");
-        strPlayerSelection = playerSelection.toLowerCase();
-
-        if(strPlayerSelection === "rock" || strPlayerSelection === "paper" || strPlayerSelection === "scissors"){
-
-            return strPlayerSelection
-
-        } else{
-            strPlayerSelection = "";
-            alert("type error!");
-
-        }
-
-    } while(strPlayerSelection === "");
-
-}
