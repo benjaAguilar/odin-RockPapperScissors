@@ -1,5 +1,5 @@
-let wins = 0;
-let losses = 0;
+let pcHealth = 5;
+let playerHealth = 5;
 
 let rockBtn = document.querySelector('#rock-btn');
 let paperBtn = document.querySelector('#paper-btn');    
@@ -12,27 +12,26 @@ scissorsBtn.addEventListener("click", () => { playRound("scissors") });
 function playRound(player){
     let computer = getComputerSelection();
 
-    let result = "you choose: " + player + "\n computer choose: " + computer;
-    console.log(result);
+    let resultSection = printResults(player, computer);
 
     if(player === computer){
-        console.warn("its a tie!");
+        resultSection.textContent = "its a tie!";
 
     } else if(computer === "rock" && player === "scissors"){
-        losses++;
-        console.warn("You lose!");
+        playerHealth--;
+        resultSection.textContent = "You lose!";
 
     } else if(computer === "paper" && player === "rock"){
-        losses++;
-        console.warn("You lose!");
+        playerHealth--;
+        resultSection.textContent = "You lose!";
 
     } else if(computer === "scissors" && player === "paper"){
-        losses++;
-        console.warn("You lose!");
+        playerHealth--;
+        resultSection.textContent = "You lose!";
 
     } else{
-        wins++;
-        console.warn("You won!");
+        pcHealth--;
+        resultSection.textContent = "You won!";
 
     }
 }
@@ -80,4 +79,16 @@ function getComputerSelection(){
     }
 
     return computerSelection;
+}
+
+function printResults(player, computer){
+
+    let resultSection = document.querySelector('.results h2');
+
+    let result = "you choose: " + player + " computer choose: " + computer;
+
+    let para = document.querySelector('#para');
+    para.textContent = result;
+
+    return resultSection
 }
