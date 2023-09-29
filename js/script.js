@@ -14,22 +14,22 @@ resetBtn.addEventListener("click", () => {location.reload()});
 resetBtn.style.display = "none";
 
 function playRound(player){
-    let computer = getComputerSelection();
+    let pc = getPcSelection();
 
-    let resultSection = printResults(player, computer);
+    let resultSection = printResults(player, pc);
 
-    if(player === computer){
+    if(player === pc){
         resultSection.textContent = "its a tie!";
 
-    } else if(computer === "rock" && player === "scissors"){
+    } else if(pc === "rock" && player === "scissors"){
         healthSystem("player");
         resultSection.textContent = "You lose!";
 
-    } else if(computer === "paper" && player === "rock"){
+    } else if(pc === "paper" && player === "rock"){
         healthSystem("player");
         resultSection.textContent = "You lose!";
 
-    } else if(computer === "scissors" && player === "paper"){
+    } else if(pc === "scissors" && player === "paper"){
         healthSystem("player");
         resultSection.textContent = "You lose!";
 
@@ -58,7 +58,7 @@ function healthSystem(loseHealth){
     }
 }
 
-function getComputerSelection(){
+function getPcSelection(){
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     let computerSelection;
 
