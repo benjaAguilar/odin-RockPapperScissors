@@ -4,10 +4,14 @@ let playerHealth = 5;
 let rockBtn = document.querySelector('#rock-btn');
 let paperBtn = document.querySelector('#paper-btn');    
 let scissorsBtn = document.querySelector('#scissors-btn');
+let resetBtn = document.querySelector('#reset');
 
 rockBtn.addEventListener("click", () => { playRound("rock") });
 paperBtn.addEventListener("click", () => { playRound("paper") });
 scissorsBtn.addEventListener("click", () => { playRound("scissors") });
+resetBtn.addEventListener("click", () => {location.reload()});
+
+resetBtn.style.display = "none";
 
 function playRound(player){
     let computer = getComputerSelection();
@@ -109,4 +113,27 @@ function printResults(player, computer){
     para.textContent = result;
 
     return resultSection
+}
+
+function endGame(){
+    let finalScore;
+
+    if(playerHealth > pcHealth){
+        finalScore = "YOU ARE VICTORIUS!";
+
+    } else{
+        finalScore = "DEFEATED!";
+
+    }
+
+    let parentNode = document.querySelector('.main h1');
+    let endResult = document.createElement('h2');
+    endResult.textContent = finalScore;
+    parentNode.after(endResult);
+
+    resetBtn.style.display = "block";
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
+    
 }
