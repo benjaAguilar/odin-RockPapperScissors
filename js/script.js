@@ -1,9 +1,16 @@
 let wins = 0;
 let losses = 0;
 
-function playRound(){
+let rockBtn = document.querySelector('#rock-btn');
+let paperBtn = document.querySelector('#paper-btn');    
+let scissorsBtn = document.querySelector('#scissors-btn');
+
+rockBtn.addEventListener("click", () => { playRound("rock") });
+paperBtn.addEventListener("click", () => { playRound("paper") });
+scissorsBtn.addEventListener("click", () => { playRound("scissors") });
+
+function playRound(player){
     let computer = getComputerSelection();
-    let player = getPlayerSelection();
 
     let result = "you choose: " + player + "\n computer choose: " + computer;
     console.log(result);
