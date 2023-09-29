@@ -24,7 +24,7 @@ body{
 
 .player-lives img,
 .pc-lives img{
-    width: 50px;
+    width: 40px;
 }
 
 .displayer{
@@ -35,5 +35,5 @@ body{
 }
 
 .displayer img{
-    width: 300px;
+    width: 150px;
 }
