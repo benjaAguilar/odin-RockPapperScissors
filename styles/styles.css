@@ -14,6 +14,16 @@ body{
     gap: 50px;
 }
 
+.main h1{
+    font-size: 30px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #333;
+    box-shadow: 0px 0px 5px black;
+}
+
 .user-section,
 .pc-section{
     display: flex;
@@ -25,8 +35,7 @@ body{
     font-size: 25px;
     font-weight: bold;
     color: rgb(0, 223, 186);
-    border: 5px solid rgb(254, 43, 241);
-    background-color: rgb(38, 0, 110);
+    background-color: #333;
     border-radius: 30px;
     box-shadow: 0px 0px 5px black;
 }
@@ -61,7 +70,7 @@ body{
     width: 150px;
     height: 150px;
     padding: 20px;
-    background-color: rgb(38, 0, 110);
+    background-color: #333;
     border: 1px solid #333;
     box-shadow: 0px 0px 5px black;
 }
