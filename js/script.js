@@ -16,6 +16,7 @@ resetBtn.style.display = "none";
 function playRound(player){
     let pc = getPcSelection();
 
+    showSelection(player, pc);
     let resultSection = printResults(player, pc);
 
     if(player === pc){
@@ -74,6 +75,36 @@ function getPcSelection(){
     }
 
     return computerSelection;
+}
+
+function showSelection(player, pc){
+    let playerImg = document.querySelector('#player-img');
+    let pcImg = document.querySelector('#pc-img');
+
+    switch(player){
+        case "rock":
+            playerImg.src = "imgs/rock.svg";
+        break;
+        case "paper":
+            playerImg.src = "imgs/paper.svg";
+        break;
+        case "scissors":
+            playerImg.src = "imgs/scissors.svg";
+        break;
+    }
+    
+    switch(pc){
+        case "rock":
+            pcImg.src = "imgs/rock.svg";
+        break;
+        case "paper":
+            pcImg.src = "imgs/paper.svg";
+        break;
+        case "scissors":
+            pcImg.src = "imgs/scissors.svg";
+        break;
+    }
+
 }
 
 function printResults(player, computer){
