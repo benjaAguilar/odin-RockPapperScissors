@@ -91,3 +91,19 @@ body{
 button img{
     width: 50px;
 }
+
+#reset{
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #333;
+    font-weight: bold; 
+    color: rgb(0, 223, 186);
+    background-color: #333;
+    box-shadow: 0px 0px 5px black;
+}
+
+#reset:hover{
+    border: 5px solid rgb(0, 223, 186);
+    cursor: pointer;
+}
