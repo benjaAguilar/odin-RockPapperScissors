@@ -1,0 +1,24 @@
+{
+  "name": "odin-rockpapperscissors",
+  "version": "1.0.0",
+  "description": "Creating the game rock papper scissors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaAguilar/odin-RockPapperScissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaAguilar/odin-RockPapperScissors/issues"
+  },
+  "homepage": "https://github.com/benjaAguilar/odin-RockPapperScissors#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
